@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-// Lookup performs an IP intelligence lookup for the given IP address.
+// LookupIP performs an IP intelligence lookup for the given IP address.
 // Both IPv4 and IPv6 addresses are supported.
 // The response fields populated depend on your plan tier.
 //
@@ -18,7 +18,7 @@ import (
 // ErrUnauthorized if the API key is invalid,
 // ErrRateLimit if the request limit has been exceeded, and
 // ErrNotFound if there is no record for the IP.
-func (c *Client) Lookup(ctx context.Context, ip string) (*LookupResult, error) {
+func (c *Client) LookupIP(ctx context.Context, ip string) (*LookupResult, error) {
 	if net.ParseIP(ip) == nil {
 		return nil, ErrInvalidIP
 	}

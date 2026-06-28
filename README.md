@@ -1,7 +1,7 @@
 # ipclues-go
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/ipclues/ipclues-go.svg)](https://pkg.go.dev/github.com/ipclues/ipclues-go)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-blue)](LICENSE)
 
 The official Go SDK for the [IPClues](https://ipclues.com) IP intelligence API.
 
@@ -33,7 +33,7 @@ import (
 func main() {
     client := ipclues.New()
  
-    result, err := client.Lookup(context.Background(), "1.1.1.1")
+    result, err := client.LookupIP(context.Background(), "1.1.1.1")
     if err != nil {
         log.Fatal(err)
     }
